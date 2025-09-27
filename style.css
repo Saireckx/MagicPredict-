@@ -1,0 +1,126 @@
+* {
+    font-family: "Delius", cursive;
+}
+
+body {
+    background: linear-gradient(180deg, #0c0d17, #171944);
+    height: 100vh;
+}
+.main-section {
+    position: relative;
+} 
+
+.main-title h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 64px;
+    font-family: "Delius", cursive;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.input-section input {
+    width: 920px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+}
+
+.about-title {
+    color: #fff;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+}
+
+#main-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#main-btn button {
+    width: 302px;
+    height: 58px;
+    border-radius: 30px;
+    font-size: 24px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+#main-btn button:hover {
+    background-color: rgb(136, 94, 232);
+    color: #fff;
+    transition: 0.3s;
+    
+}
+
+.support-btns {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+#circle {
+    padding-top: 30px;
+}
+
+.select-option-section {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 294px;
+    height: 311px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 20px;
+   
+}
+.card.selected {
+    border: 3px solid #9654F3;
+    transition: 0.2s;
+}
+
+
+.card span {
+    text-align: center;
+    display: block;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.card-description {
+    font-size: 20px;
+    padding: 10px;
+}
+.containerStars {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    z-index: -1;
+}
+.link {
+    text-decoration: none;
+    color: #0c0d17;
+}
