@@ -3,8 +3,7 @@
 }
 body {
     background: linear-gradient(180deg, #0c0d17, #171944);
-    height: 100vh;
-
+    box-sizing: border-box;
 }
 .main-section {
     position: relative;
@@ -14,6 +13,7 @@ body {
     text-align: center;
     font-size: 64px;
     font-family: "Delius", cursive;
+    margin: 0;
 }
 .support-btns {
     position: absolute;
@@ -29,15 +29,10 @@ i {
 #circle {
     padding-top: 30px;
 }
-
-.output-card__wrap {
-    display: flex;
-    justify-content: center;
-}
-
 .output {
     color: white;
     font-size: 24px; 
+    margin: 0;
 }
 .output-wrap {
     
@@ -91,4 +86,27 @@ i {
 }
 
 
+.output-card__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#output-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.card-row {
+    
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+}
+
+#output-card img {
+width: 200px;
+height:300px;
+}

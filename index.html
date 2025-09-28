@@ -11,21 +11,25 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Delius&family=Delius+Swash+Caps&family=Fascinate&family=Kurale&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="main-section">
-            <div class="containerStars">
-
-            </div>
         <span class="support-btns">
-            <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
-            <i class="fa-solid fa-circle-info" id="circle" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-gear" class="sp-bt" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-circle-info" class="sp-bt" id="circle" style="color: #ffffff;"></i>
         </span>
+        <div class="containerStars">
+
+        </div>
         <div class="main-title">
             <h1 id="output">Magic Predictor</h1>
-            <span class="about-title">Legend has it that a wise magician once forgot his cards here. <br>Since then, they have taken on a life of their own: <br>suggesting answers, revealing the future, and playing with the fate of anyone who dares to lay them out.👀</span>
+            <span class="about-title">Legend has it that a wise magician once forgot his cards here. <br>Since then,
+                they have taken on a life of their own: <br>suggesting answers, revealing the future, and playing with
+                the fate of anyone who dares to lay them out.👀</span>
         </div>
         <div class="input-section">
             <input class="main-input" type="text" placeholder="type something...">
@@ -33,16 +37,20 @@
         <div id="main-btn"><button>Predict</button></div>
 
         <div class="select-option-section">
-            <div class="card" class="selected" id="1card"><span class="card-title">1 card</span> <span class="card-description">Your fate will be decided by just one card, quickly and easily.</span></div>
-            <div class="card" class="selected" id="3card"><span class="card-title">3 card</span> <span class="card-description">They say the wizard left three keys - and only they know your path.</span></div>
-            <div class="card" class="selected" id="accros"><span class="card-title">Сelt accros</span> <span class="card-description">This layout is like a magic cross: it reveals the reasons, shows the essence and indicates the direction of fate.</span></div>
+            <div class="card" id="1card"><span class="card-title">1 card</span> <span class="card-description">Your fate
+                    will be decided by just one card, quickly and easily.</span></div>
+            <div class="card" id="3card"><span class="card-title">3 card</span> <span class="card-description">They say
+                    the wizard left three keys - and only they know your path.</span></div>
+            <div class="card" id="accros"><span class="card-title">Сelt accros</span> <span
+                    class="card-description">This layout is like a magic cross: it reveals the reasons, shows the
+                    essence and indicates the direction of fate.</span></div>
         </div>
     </div>
-   
-    
 
 
-    <script src="app.js"></script>
+
+
+    <script src="main.js"></script>
 </body>
 
 </html>

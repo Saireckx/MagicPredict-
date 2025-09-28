@@ -5,10 +5,13 @@
 body {
     background: linear-gradient(180deg, #0c0d17, #171944);
     height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
+
 .main-section {
     position: relative;
-} 
+}
 
 .main-title h1 {
     color: #fff;
@@ -55,11 +58,12 @@ body {
     outline: none;
     border: none;
 }
+
 #main-btn button:hover {
     background-color: rgb(136, 94, 232);
     color: #fff;
     transition: 0.3s;
-    
+
 }
 
 .support-btns {
@@ -69,10 +73,12 @@ body {
     align-items: flex-end;
     flex-direction: column;
 }
+
 i {
     font-size: 30px;
     margin-right: 10px;
 }
+
 #circle {
     padding-top: 30px;
 }
@@ -91,8 +97,9 @@ i {
     flex-direction: column;
     justify-content: center;
     margin: 50px 20px;
-   
+
 }
+
 .card.selected {
     border: 3px solid #9654F3;
     transition: 0.2s;
@@ -114,13 +121,50 @@ i {
     font-size: 20px;
     padding: 10px;
 }
+
 .containerStars {
     position: absolute;
     width: 100%;
     height: 700px;
     z-index: -1;
 }
+
 .link {
     text-decoration: none;
     color: #0c0d17;
+}
+
+.main-title,
+.input-section,
+#main-btn,
+.select-option-section,
+.sp-bt,
+.containerStars {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.sp-bt.visible,
+.containerStars.visible,
+.main-title.visible,
+.input-section.visible,
+#main-btn.visible,
+.select-option-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.sp-bt.visible {
+    transition-delay: 0.2s;
+}
+.containerStars.visible {
+    transition-delay: 0.2s;
+}
+.input-section.visible {
+    transition-delay: 0.2s;
+}
+#main-btn.visible {
+    transition-delay: 0.4s;
+}
+.select-option-section.visible {
+    transition-delay: 0.6s;
 }

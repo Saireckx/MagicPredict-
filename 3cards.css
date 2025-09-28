@@ -3,8 +3,6 @@
 }
 body {
     background: linear-gradient(180deg, #0c0d17, #171944);
-    height: 100vh;
-
 }
 .main-section {
     position: relative;
@@ -89,6 +87,3 @@ i {
 .output-wrap.visible {
     transition-delay: 0.4s;
 }
-
-
-

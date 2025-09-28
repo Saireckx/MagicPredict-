@@ -1,27 +1,27 @@
 
-function generateStars() {
+function generateStars () {
 
-    const starsContainer = document.querySelector(".containerStars")
-    const numberOfStars = 50;
+const starsContainer = document.querySelector(".containerStars")
+const numberOfStars = 50;
 
-    for (let i = 0; i < numberOfStars; i++) {
-        const star = document.createElement("span");
-        star.style.position = "absolute";
-        star.style.width = "4px";
-        star.style.height = "4px";
-        star.style.borderRadius = "50%";
-        star.style.backgroundColor = "#fff";
+for (let i = 0; i < numberOfStars; i++) {
+    const star = document.createElement("span");
+    star.style.position = "absolute";
+    star.style.width = "4px";
+    star.style.height = "4px";
+    star.style.borderRadius = "50%";
+    star.style.backgroundColor = "#fff";
 
-        const randomX = Math.random() * (starsContainer.clientWidth);
-        const randomY = Math.random() * (starsContainer.clientHeight);
+    const randomX = Math.random() * (starsContainer.clientWidth);
+    const randomY = Math.random() * (starsContainer.clientHeight);
 
-        star.style.left = randomX + "px";
-        star.style.top = randomY + "px";
+    star.style.left = randomX + "px";
+    star.style.top = randomY + "px";
 
 
-        starsContainer.appendChild(star);
+    starsContainer.appendChild(star);
 
-    }
+}
 }
 
 
@@ -42,19 +42,25 @@ function displayAnswerFromAI() {
 
 function displayImgFromRandom() {
     const urlParams = new URLSearchParams(window.location.search);
-    const encodedImg = urlParams.get("card");
+    
+
+    for (let i = 1; i <= 3; i++) {
+
+        const encodedImg = urlParams.get(`card${i}`);
 
     if (encodedImg) {
         const imgPath = decodeURIComponent(encodedImg);
-        const imgContainer = document.getElementById("output-card");
+        const imgContainer = document.querySelector(".output-card");
         const createNewImg = document.createElement("img");
 
         createNewImg.src = imgPath;
         createNewImg.style.width = "300px";
         createNewImg.style.height = "400px";
-        imgContainer.appendChild(createNewImg);
+        imgContainer.appendChild(createNewImg)
     }
+
 }
+ }
 
 function randomEmoji() {
     let emojiContainer = document.querySelector(".emoji");
@@ -70,18 +76,15 @@ function randomEmoji() {
 
 }
 
-generateStars();
-displayAnswerFromAI();
-displayImgFromRandom();
-randomEmoji();
+    generateStars();
+    displayAnswerFromAI();
+    displayImgFromRandom();
+    randomEmoji();
 
-
-const title = document.querySelector('.main-title');
+    const title = document.querySelector('.main-title');
 const cardWrap = document.querySelector('.output-card__wrap');
 const outputWrap = document.querySelector('.output-wrap');
 
 title.classList.add("visible")
 cardWrap.classList.add("visible")
 outputWrap.classList.add("visible")
-
-

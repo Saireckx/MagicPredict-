@@ -42,17 +42,27 @@ function displayAnswerFromAI() {
 
 function displayImgFromRandom() {
     const urlParams = new URLSearchParams(window.location.search);
-    const encodedImg = urlParams.get("card");
 
-    if (encodedImg) {
-        const imgPath = decodeURIComponent(encodedImg);
-        const imgContainer = document.getElementById("output-card");
-        const createNewImg = document.createElement("img");
 
-        createNewImg.src = imgPath;
-        createNewImg.style.width = "300px";
-        createNewImg.style.height = "400px";
-        imgContainer.appendChild(createNewImg);
+   for (let i = 1; i <= 5; i++) {
+
+        const encodedImg = urlParams.get(`card${i}`);
+
+            const imgPath = decodeURIComponent(encodedImg);
+            const createNewImg = document.createElement("img");
+            const topRow = document.querySelector(".top-row")
+            const bottomRow = document.querySelector(".bottom-row")
+
+            createNewImg.src = imgPath;
+            createNewImg.style.width = "200px";
+            createNewImg.style.height = "300px";
+
+            if (i <= 2) {
+                topRow.appendChild(createNewImg);
+            } else {
+                bottomRow.appendChild(createNewImg)
+            }
+
     }
 }
 
@@ -75,7 +85,6 @@ displayAnswerFromAI();
 displayImgFromRandom();
 randomEmoji();
 
-
 const title = document.querySelector('.main-title');
 const cardWrap = document.querySelector('.output-card__wrap');
 const outputWrap = document.querySelector('.output-wrap');
@@ -83,5 +92,6 @@ const outputWrap = document.querySelector('.output-wrap');
 title.classList.add("visible")
 cardWrap.classList.add("visible")
 outputWrap.classList.add("visible")
+
 
 
