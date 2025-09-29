@@ -2,7 +2,7 @@
 function generateStars() {
 
     const starsContainer = document.querySelector(".container-stars")
-    const numberOfStars = 50;
+    const numberOfStars = 70;
 
     for (let i = 0; i < numberOfStars; i++) {
         const star = document.createElement("span");
