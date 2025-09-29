@@ -7,7 +7,7 @@ cards.forEach(card => {
     });
 });
 
-const starsContainer = document.querySelector(".containerStars")
+const starsContainer = document.querySelector(".container-stars")
 const numberOfStars = 100;
 
 for (let i = 0; i < numberOfStars; i++) {
@@ -215,7 +215,7 @@ predictButton.addEventListener("click", async () => {
             const card4 = encodeURIComponent(cardImgPaths[3]);
             const card5 = encodeURIComponent(cardImgPaths[4]);
 
-            const targetURL = `accros.html?message=${showResult}&card1=${card1}&card2=${card2}&card3=${card3}&card4=${card4}&card5=${card5}`;
+            const targetURL = `5card.html?message=${showResult}&card1=${card1}&card2=${card2}&card3=${card3}&card4=${card4}&card5=${card5}`;
             window.location.href = targetURL
         }
     } catch (error) {
@@ -227,15 +227,15 @@ const title = document.querySelector(".main-title");
 const input = document.querySelector(".input-section");
 const btn = document.getElementById("main-btn");
 const option = document.querySelector(".select-option-section");
-const supBtn = document.querySelector(".support-btns");
-const starBg = document.querySelector(".containerStars");
+
+const starBg = document.querySelector(".container-stars");
 
 starBg.classList.add("visible");
 title.classList.add("visible");
 input.classList.add("visible");
 btn.classList.add("visible");
 option.classList.add("visible");
-supBtn.classList.add("visible");
+
 
 
 

@@ -1,30 +1,26 @@
 
-function generateStars () {
+function generateStars() {
 
-const starsContainer = document.querySelector(".containerStars")
-const numberOfStars = 50;
+    const starsContainer = document.querySelector(".container-stars")
+    const numberOfStars = 50;
 
-for (let i = 0; i < numberOfStars; i++) {
-    const star = document.createElement("span");
-    star.style.position = "absolute";
-    star.style.width = "4px";
-    star.style.height = "4px";
-    star.style.borderRadius = "50%";
-    star.style.backgroundColor = "#fff";
+    for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement("span");
+        star.style.position = "absolute";
+        star.style.width = "4px";
+        star.style.height = "4px";
+        star.style.borderRadius = "50%";
+        star.style.backgroundColor = "#fff";
 
-    const randomX = Math.random() * (starsContainer.clientWidth);
-    const randomY = Math.random() * (starsContainer.clientHeight);
+        const randomX = Math.random() * (starsContainer.clientWidth);
+        const randomY = Math.random() * (starsContainer.clientHeight);
 
-    star.style.left = randomX + "px";
-    star.style.top = randomY + "px";
+        star.style.left = randomX + "px";
+        star.style.top = randomY + "px";
 
-
-    starsContainer.appendChild(star);
-
+        starsContainer.appendChild(star);
+    }
 }
-}
-
-
 function displayAnswerFromAI() {
     const urlParams = new URLSearchParams(window.location.search)
     const encodedMessage = urlParams.get('message');
@@ -84,7 +80,9 @@ function randomEmoji() {
     const title = document.querySelector('.main-title');
 const cardWrap = document.querySelector('.output-card__wrap');
 const outputWrap = document.querySelector('.output-wrap');
+const stars = document.querySelector(".container-stars");
 
-title.classList.add("visible")
-cardWrap.classList.add("visible")
-outputWrap.classList.add("visible")
+title.classList.add("visible");
+cardWrap.classList.add("visible");
+outputWrap.classList.add("visible");
+stars.classList.add("visible");

@@ -1,7 +1,7 @@
 
 function generateStars() {
 
-    const starsContainer = document.querySelector(".containerStars")
+    const starsContainer = document.querySelector(".container-stars")
     const numberOfStars = 50;
 
     for (let i = 0; i < numberOfStars; i++) {
@@ -18,12 +18,9 @@ function generateStars() {
         star.style.left = randomX + "px";
         star.style.top = randomY + "px";
 
-
         starsContainer.appendChild(star);
-
     }
 }
-
 
 function displayAnswerFromAI() {
     const urlParams = new URLSearchParams(window.location.search)
@@ -42,7 +39,6 @@ function displayAnswerFromAI() {
 
 function displayImgFromRandom() {
     const urlParams = new URLSearchParams(window.location.search);
-
 
    for (let i = 1; i <= 5; i++) {
 
@@ -77,7 +73,6 @@ function randomEmoji() {
     const emojiOutput = emojiArr[randomEmoji]
 
     emojiContainer.innerHTML = emojiOutput;
-
 }
 
 generateStars();
@@ -88,10 +83,12 @@ randomEmoji();
 const title = document.querySelector('.main-title');
 const cardWrap = document.querySelector('.output-card__wrap');
 const outputWrap = document.querySelector('.output-wrap');
+const stars = document.querySelector(".container-stars")
 
 title.classList.add("visible")
 cardWrap.classList.add("visible")
 outputWrap.classList.add("visible")
+stars.classList.add("visible")
 
 
 

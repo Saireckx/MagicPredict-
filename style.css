@@ -2,7 +2,7 @@
     font-family: "Delius", cursive;
 }
 
-html {
+html,body{
     background: linear-gradient(180deg, #0c0d17, #171944);
     margin: 0;
     height: 100%;
@@ -66,22 +66,6 @@ html {
 
 }
 
-.support-btns {
-    position: absolute;
-    right: 20px;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-}
-
-i {
-    font-size: 30px;
-    margin-right: 10px;
-}
-
-#circle {
-    padding-top: 30px;
-}
 
 .select-option-section {
     display: flex;
@@ -121,11 +105,11 @@ i {
     padding: 10px;
 }
 
-.containerStars {
+.container-stars {
     position: absolute;
     width: 100%;
     height: 700px;
-    z-index: -1;
+    z-index: 0;
 }
 
 .link {
@@ -137,15 +121,12 @@ i {
 .input-section,
 #main-btn,
 .select-option-section,
-.sp-bt,
-.containerStars {
+.container-stars {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
-.sp-bt.visible,
-.containerStars.visible,
+.container-stars.visible,
 .main-title.visible,
 .input-section.visible,
 #main-btn.visible,
@@ -154,12 +135,8 @@ i {
     transform: translateY(0);
 }
 
-.sp-bt.visible {
-    transition-delay: 0.2s;
-}
-
-.containerStars.visible {
-    transition-delay: 0.2s;
+.container-stars.visible {
+    transition-delay: 0.4s;
 }
 
 .input-section.visible {

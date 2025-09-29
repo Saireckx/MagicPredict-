@@ -1,8 +1,8 @@
 
 function generateStars() {
 
-    const starsContainer = document.querySelector(".containerStars")
-    const numberOfStars = 50;
+    const starsContainer = document.querySelector(".container-stars")
+    const numberOfStars = 70;
 
     for (let i = 0; i < numberOfStars; i++) {
         const star = document.createElement("span");
@@ -79,9 +79,11 @@ randomEmoji();
 const title = document.querySelector('.main-title');
 const cardWrap = document.querySelector('.output-card__wrap');
 const outputWrap = document.querySelector('.output-wrap');
+const star = document.querySelector(".container-stars");
 
 title.classList.add("visible")
 cardWrap.classList.add("visible")
 outputWrap.classList.add("visible")
+star.classList.add("visible")
 
 
