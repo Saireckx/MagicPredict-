@@ -2,10 +2,10 @@
     font-family: "Delius", cursive;
 }
 
-body {
+html {
     background: linear-gradient(180deg, #0c0d17, #171944);
-    height: 100vh;
     margin: 0;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -96,8 +96,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 50px 20px;
-
+    margin: 50px 0 0 30px;
 }
 
 .card.selected {
@@ -144,6 +143,7 @@ i {
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .sp-bt.visible,
 .containerStars.visible,
 .main-title.visible,
@@ -153,18 +153,112 @@ i {
     opacity: 1;
     transform: translateY(0);
 }
+
 .sp-bt.visible {
     transition-delay: 0.2s;
 }
+
 .containerStars.visible {
     transition-delay: 0.2s;
 }
+
 .input-section.visible {
     transition-delay: 0.2s;
 }
+
 #main-btn.visible {
     transition-delay: 0.4s;
 }
+
 .select-option-section.visible {
     transition-delay: 0.6s;
+}
+
+.pre-loader__container {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 700px;
+    height: 100px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+}
+
+.pre-loader__container.loaded {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.pre-loader__container span {
+    font-size: 24px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    padding: 30px;
+    padding-right: 20px;
+}
+
+.loader {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    animation:
+        l20-1 0.8s infinite linear alternate,
+        l20-2 1.6s infinite linear;
+}
+
+@keyframes l20-1 {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%)
+    }
+
+    12.5% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%)
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%)
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    62.5% {
+        clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%)
+    }
+}
+
+@keyframes l20-2 {
+    0% {
+        transform: scaleY(1) rotate(0deg)
+    }
+
+    49.99% {
+        transform: scaleY(1) rotate(135deg)
+    }
+
+    50% {
+        transform: scaleY(-1) rotate(0deg)
+    }
+
+    100% {
+        transform: scaleY(-1) rotate(-135deg)
+    }
 }

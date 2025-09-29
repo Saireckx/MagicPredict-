@@ -139,6 +139,7 @@ const allImgArr = [
     "img/Wands14.png"
 ];
 
+const preLoader = document.querySelector(".pre-loader__container");
 const inputElement = document.querySelector(".main-input");
 const predictButton = document.querySelector("#main-btn button");
 const oneCard = document.getElementById("1card");
@@ -147,6 +148,7 @@ const accrosOfCards = document.getElementById("accros");
 
 
 predictButton.addEventListener("click", async () => {
+
     let randomCards = [];
     let cardImgPaths = [];
 
@@ -189,6 +191,7 @@ predictButton.addEventListener("click", async () => {
     const userPrompt = userPromptSettings + inputElement.value;
 
     try {
+        preLoader.classList.add("loaded");
         const result = await getOpenRouterCompletion(userPrompt);
         const showResult = encodeURIComponent(result);
 
@@ -225,7 +228,7 @@ const input = document.querySelector(".input-section");
 const btn = document.getElementById("main-btn");
 const option = document.querySelector(".select-option-section");
 const supBtn = document.querySelector(".support-btns");
-const starBg = document.querySelector(".containerStars")
+const starBg = document.querySelector(".containerStars");
 
 starBg.classList.add("visible");
 title.classList.add("visible");
