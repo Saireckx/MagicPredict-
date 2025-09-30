@@ -27,8 +27,8 @@ for (let i = 0; i < numberOfStars; i++) {
     starsContainer.appendChild(star);
 
 }
-const OPENROUTER_API_KEY = "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";
-const YOUR_SITE_URL = "http://127.0.0.1:5500/";
+const OPENROUTER_API_KEY = "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";
+const YOUR_SITE_URL = "https://saireckx.github.io/MagicPredict-/";
 
 async function getOpenRouterCompletion(prompt) {
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
