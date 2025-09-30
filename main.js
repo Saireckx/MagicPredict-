@@ -236,7 +236,6 @@ input.classList.add("visible");
 btn.classList.add("visible");
 option.classList.add("visible");
 
-preLoader.classList.remove("loaded");
 
 
 
